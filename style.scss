@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: rgb(33, 32, 32);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.password {
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.container {
+  width: 90%;
+  padding: 1.5em 1em;
+  margin: auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  border-radius: 30px;
+
+  .includes {
+    div {
+      position: relative;
+
+      input[type="checkbox"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+        cursor: pointer;
+      }
+
+      label {
+        margin-left: 30px;
+        pointer-events: none;
+      }
+    }
+
+    .lenght {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 100%;
+        position: relative;
+      }
+
+      label {
+        margin-left: 0px;
+      }
+
+      span {
+        background-color: rgba(0, 0, 0);
+        text-align: center;
+        width: 40px;
+        height: 30px;
+        position: absolute;
+        z-index: 99;
+        top: -45px;
+        opacity: 0;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 15px;
+          background-color: rgba(0, 0, 0);
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          z-index: -1;
+        }
+      }
+
+      .active-span {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.password-strenght {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+  .display {
+    display: flex;
+    gap: 3px;
+
+    .strenght {
+      margin-right: 10px;
+    }
+
+    span {
+      width: 10px;
+      height: 20px;
+      background-color: white;
+      border-radius: 2px;
+    }
+  }
+}
+
+.generate {
+  margin-top: 10px;
+
+  button {
+    color: white;
+    background-color: rgb(47, 122, 32);
+    outline: none;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+}

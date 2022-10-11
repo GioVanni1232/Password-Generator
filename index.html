@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Genertor</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="password">PASSWORD GOES HERE</div>
+      <div class="includes">
+        <div>
+          <input type="checkbox" name="letter" id="letter" checked />
+          <label for="symbol">Include Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" name="sysmbol" id="symbol" />
+          <label for="symbol">Include Symbols</label>
+        </div>
+        <div>
+          <input type="checkbox" name="number" id="number" />
+          <label for="number">Include Numbers</label>
+        </div>
+
+        <div class="lenght">
+          <span>0</span>
+          <input
+            min="0"
+            max="20"
+            value="0"
+            step="1"
+            type="range"
+            name="length"
+            id="length"
+          />
+          <label for="length">Password Length</label>
+        </div>
+      </div>
+      <div class="password-strenght">
+        <p>Password Strenght</p>
+        <div class="display">
+          <p class="strenght">Low</p>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="generate">
+        <button>Generate</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
